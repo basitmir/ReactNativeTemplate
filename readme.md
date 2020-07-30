@@ -11,7 +11,7 @@
 cd ios && pod install 
 ```
 - To link fonts to react-native, run below command
-```
+```bash
 yarn react-native link
 ```
 

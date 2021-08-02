@@ -1,18 +1,13 @@
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { AppTabNavigators } from './AppTabNavigators';
+// App Navigation Container
+import React from "react"
+import { NavigationContainer } from "@react-navigation/native"
+import { AppStacks } from "./AppStack"
+import { navigationRef } from "./RootNavigator"
 
-const Stack = createStackNavigator();
-
-const AppContainer = () => {
+export const AppContainer = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Tabs" component={AppTabNavigators} />
-      </Stack.Navigator>
+    <NavigationContainer ref={navigationRef}>
+      <AppStacks />
     </NavigationContainer>
-  );
+  )
 }
-
-export default AppContainer;
